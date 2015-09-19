@@ -66,7 +66,7 @@ Label</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="iconImageView" destination="0aU-5b-MfJ" id="FDT-L2-lCr"/>
+                                    <outlet property="iconImageView" destination="tGl-rV-xKD" id="Ugd-9L-cPZ"/>
                                     <outlet property="tweetLabel" destination="iyq-iD-oqQ" id="k8w-Tw-Wk2"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="KNF-WV-2if"/>
                                 </connections>

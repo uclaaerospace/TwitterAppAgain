@@ -10,7 +10,18 @@ import UIKit
 
 class TimeLineTableViewController: UITableViewController {
 
-    let dataArray:[[String:String]] = [["title":"タイトル1"],["title":"タイトル2"]]
+    let dataArray:[[String:String]] = [
+        [   "title":"タイトル1",
+            "image" : "http://goo.gl/mWPR9w"
+        
+        
+        ],
+        [   "title":"タイトル2",
+            "image": "http://goo.gl/qFhR0R"
+        
+        ]
+    
+    ]
 
    
     
@@ -23,10 +34,17 @@ class TimeLineTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //セルを内部的にリサイクルしているのでこちらが必須になります。
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TimeLineTableViewCell
         
-        cell.textLabel?.text = dataArray[indexPath.row]["title"]
+        cell.tweetLabel.text = dataArray[indexPath.row]["title"]
         
+        if let imageURLString = dataArray[indexPath.row]["image"]
+            , let imageURL = NSURL(string: imageURLString){
+                
+    
+        cell.iconImageView.sd_setImageWithURL(imageURL)
+                
+        }
         return cell
     
     }
