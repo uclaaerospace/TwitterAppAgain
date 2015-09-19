@@ -26,13 +26,13 @@
         <!--Timeline-->
         <scene sceneID="st5-bX-sLu">
             <objects>
-                <tableViewController id="enL-PS-or8" sceneMemberID="viewController">
+                <tableViewController id="enL-PS-or8" customClass="TimeLineTableViewController" customModule="TwitterAppAgain" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="ifn-7z-8BT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="ZLx-UA-qnM">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="120" id="ZLx-UA-qnM" customClass="TimeLineTableViewCell" customModule="TwitterAppAgain" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZLx-UA-qnM" id="0aU-5b-MfJ">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -66,6 +66,8 @@ Label</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="iconImageView" destination="0aU-5b-MfJ" id="FDT-L2-lCr"/>
+                                    <outlet property="tweetLabel" destination="iyq-iD-oqQ" id="k8w-Tw-Wk2"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="KNF-WV-2if"/>
                                 </connections>
                             </tableViewCell>
@@ -76,7 +78,7 @@ Label</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Timeline" id="w9Q-za-uoY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2At-Zh-weC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2At-Zh-weC" customClass="T">
                             <color key="tintColor" red="0.34316718730055851" green="1" blue="0.04878849558450804" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
