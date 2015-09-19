@@ -78,8 +78,11 @@ Label</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Timeline" id="w9Q-za-uoY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2At-Zh-weC" customClass="T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2At-Zh-weC">
                             <color key="tintColor" red="0.34316718730055851" green="1" blue="0.04878849558450804" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="tapTweetButton:" destination="enL-PS-or8" id="Voz-4j-0KK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
